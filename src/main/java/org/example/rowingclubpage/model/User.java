@@ -33,4 +33,7 @@ public class User {
     @ManyToMany(mappedBy = "users")
     private List<Training> trainings = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    private List<Payment> payments = new ArrayList<>();
+
 }
